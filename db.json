@@ -1,11 +1,18 @@
 {
   "users": [
     {
-      "id": 0,
       "username": "lonni",
       "name": "Andrea",
       "surname": "Lo Nivuro",
-      "password": "ciao"
+      "password": "ciao",
+      "id": 0
+    },
+    {
+      "username": "tita",
+      "name": "Silvia",
+      "surname": "Lo Nivuro",
+      "password": "ciao",
+      "id": 1
     }
   ],
   "products": [
