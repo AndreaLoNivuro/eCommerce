@@ -1,7 +1,7 @@
-import {HttpClient, HttpEvent, HttpEventType, HttpParams, HttpRequest, HttpResponse} from '@angular/common/http';
+import { HttpClient, HttpEvent, HttpEventType, HttpParams, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {filter, map} from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Injectable()
 export class HttpCommunicationService {

@@ -4,7 +4,8 @@
       "id": 0,
       "username": "lonni",
       "name": "Andrea",
-      "surname": "Lo Nivuro"
+      "surname": "Lo Nivuro",
+      "password": "ciao"
     }
   ],
   "products": [

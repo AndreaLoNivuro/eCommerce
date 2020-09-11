@@ -1,18 +1,20 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { User } from 'src/app/core/model/user';
-import { saveCurrentUser } from './login.action';
+import { initUser } from './login.action';
 
 export interface UsersState {
     currentUser: User;
+    errorMessage: string | null;
 }
 
 export const initialState: UsersState = {
-    currentUser: null
+    currentUser: null,
+    errorMessage: null
 };
 
 const usersReducerFun = createReducer(
     initialState,
-    on(saveCurrentUser, (state, { user }) => ({ ...state, currentUser: user })),
+    on(initUser, (state, { user }) => ({ ...state, currentUser: user })),
 );
 
 export function usersReducer(state: UsersState | undefined, action: Action) {
