@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { User } from 'src/app/core/model/user';
-import { initUser, loginUser } from 'src/app/redux/users/login.action';
+import { loginUser } from 'src/app/redux/users/login.action';
+
 @Injectable()
 export class LoginService {
 

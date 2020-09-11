@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LoginEffects } from './redux/users/login.effects';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LoginEffects } from './redux/users/login.effects';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    SharedModule,
     StoreModule.forRoot({ usersState: usersReducer }),
     EffectsModule.forRoot([LoginEffects]),
     StoreDevtoolsModule.instrument({
