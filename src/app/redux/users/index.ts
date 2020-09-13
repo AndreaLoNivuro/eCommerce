@@ -12,4 +12,4 @@ export const getCurrentUser = createSelector(
 export const selectErrorMessage = createSelector(
     selectUsersState,
     (state: UsersState) => state.errorMessage
-)
+);
