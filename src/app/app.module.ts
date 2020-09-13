@@ -11,6 +11,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { SharedModule } from './shared/shared.module';
 import { LoginEffects } from './redux/users/login.effects';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { LoginEffects } from './redux/users/login.effects';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
