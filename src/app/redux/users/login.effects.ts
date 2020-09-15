@@ -4,7 +4,7 @@ import { HttpCommunicationService } from 'src/app/core/HttpCommunication/http-co
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { switchMap, map, tap } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
-import { User } from 'src/app/core/model/user';
+import { User } from 'src/app/core/model/user.interface';
 import { loginUser, loginUserFailure, loginUserSuccess, initUser, signUpUser, signUpUserSuccess } from './login.action';
 
 @Injectable()

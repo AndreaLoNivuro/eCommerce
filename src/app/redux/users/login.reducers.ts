@@ -1,5 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { User } from 'src/app/core/model/user';
+import { User } from 'src/app/core/model/user.interface';
 import { initUser, loginUserFailure } from './login.action';
 
 export interface UsersState {
