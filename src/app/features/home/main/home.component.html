@@ -27,4 +27,5 @@
       </div>
     </ng-template>
   </ngb-carousel>
-<div>ciao</div>
+
+  <div *ngFor="let product of products | async">{{ product.id }}</div>
