@@ -20,6 +20,13 @@
       "surname": "Palmieri",
       "password": "andrea",
       "id": 2
+    },
+    {
+      "username": "ciao",
+      "name": "ciao",
+      "surname": "ciao",
+      "password": "ciao",
+      "id": 3
     }
   ],
   "products": [
@@ -27,7 +34,16 @@
       "id": 0,
       "colore": "Azzurro",
       "img": "assets/scarpe/superga/supergaAzzurre.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "superga"
     },
@@ -35,7 +51,16 @@
       "id": 1,
       "colore": "Blu",
       "img": "assets/scarpe/superga/supergaBlu.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "superga"
     },
@@ -43,7 +68,16 @@
       "id": 2,
       "colore": "Grigio",
       "img": "assets/scarpe/superga/supergaGrigie.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "superga"
     },
@@ -51,7 +85,16 @@
       "id": 3,
       "colore": "Nero",
       "img": "assets/scarpe/superga/supergaNere.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "superga"
     },
@@ -59,7 +102,16 @@
       "id": 4,
       "colore": "Rosa",
       "img": "assets/scarpe/superga/supergaRosa.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "superga"
     },
@@ -67,15 +119,33 @@
       "id": 5,
       "colore": "Rosso",
       "img": "assets/scarpe/superga/supergaRosse.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "superga"
     },
     {
       "id": 6,
       "colore": "Blu",
-      "img": "assets/scarpe/adidas/adidas.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "img": "assets/scarpe/adidas/adidasBlu.jpg",
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "adidas"
     },
@@ -83,7 +153,16 @@
       "id": 7,
       "colore": "Fiori",
       "img": "assets/scarpe/adidas/adidasFiori.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "adidas"
     },
@@ -91,7 +170,16 @@
       "id": 8,
       "colore": "Nero",
       "img": "assets/scarpe/adidas/adidasNere.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "adidas"
     },
@@ -99,7 +187,16 @@
       "id": 9,
       "colore": "Nere con fiori",
       "img": "assets/scarpe/adidas/adidasNereFiori.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "adidas"
     },
@@ -107,7 +204,16 @@
       "id": 10,
       "colore": "Rosa",
       "img": "assets/scarpe/adidas/adidasRosa.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "adidas"
     },
@@ -115,7 +221,16 @@
       "id": 11,
       "colore": "Sushi",
       "img": "assets/scarpe/adidas/adidasSushi.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "adidas"
     },
@@ -123,7 +238,16 @@
       "id": 12,
       "colore": "Azzurro",
       "img": "assets/scarpe/vans/vansAzzurre.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "vans"
     },
@@ -131,7 +255,16 @@
       "id": 13,
       "colore": "Bianco",
       "img": "assets/scarpe/vans/vansBianche.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "vans"
     },
@@ -139,7 +272,16 @@
       "id": 14,
       "colore": "Lime",
       "img": "assets/scarpe/vans/vansLime.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "vans"
     },
@@ -147,7 +289,16 @@
       "id": 15,
       "colore": "Nero",
       "img": "assets/scarpe/vans/vansNere.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "vans"
     },
@@ -155,7 +306,16 @@
       "id": 16,
       "colore": "Rosa",
       "img": "assets/scarpe/vans/vansRosa.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "vans"
     },
@@ -163,7 +323,16 @@
       "id": 17,
       "colore": "Verde Acqua",
       "img": "assets/scarpe/vans/vansVerdeAcqua.jpg",
-      "number": [35, 36, 37, 38, 39, 40, 41, 42],
+      "number": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
       "prezzo": 50,
       "marca": "vans"
     }

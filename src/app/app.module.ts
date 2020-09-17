@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { StoreModule } from '@ngrx/store';
-import { usersReducer } from './redux/users/login.reducers';
 import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -15,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { reducers } from './redux';
 import { MenuComponent } from './menu/menu.component';
 import { ProductsEffects } from './redux/products/products.effects';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { ProductsEffects } from './redux/products/products.effects';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
-    NgbModule
+    NgbModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

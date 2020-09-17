@@ -4,9 +4,5 @@ export interface Products {
     img: string;
     number: number[];
     prezzo: number;
-    marca: Marca;
-}
-
-export enum Marca {
-    SUPERGA, ADIDAS, VANS
+    marca: string;
 }

@@ -3,7 +3,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Products } from 'src/app/core/model/products.interface';
-import { selectProducts } from 'src/app/redux/products';
+import { selectProducts, selectProductsByMarca } from 'src/app/redux/products';
 import { retrieveAllProducts } from 'src/app/redux/products/products.action';
 
 @Component({
@@ -13,6 +13,12 @@ import { retrieveAllProducts } from 'src/app/redux/products/products.action';
   providers: [NgbCarouselConfig]
 })
 export class HomeComponent implements OnInit {
+
+  listaToShow: string = "";
+
+  cambiaLista(lista: string) {
+    this.listaToShow = lista;
+  }
 
   constructor(private store: Store, config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
@@ -26,10 +32,23 @@ export class HomeComponent implements OnInit {
     this.store.dispatch(retrieveAllProducts())
   }
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = ["../../../assets/logo/superga.png", "../../../assets/logo/adidas.jpg", "../../../assets/logo/vans.jpg"];
+  
 
   get products(): Observable<Products[]> {
     return this.store.pipe(select(selectProducts));
+  }
+
+  get productsSuperga(): Observable<Products[]> {
+    return this.store.pipe(select(selectProductsByMarca, {marca: "superga"}));
+  }
+
+  get productsAdidas(): Observable<Products[]> {
+    return this.store.pipe(select(selectProductsByMarca, {marca: "adidas"}));
+  }
+
+  get productsVans(): Observable<Products[]> {
+    return this.store.pipe(select(selectProductsByMarca, {marca: "vans"}));
   }
   
 }

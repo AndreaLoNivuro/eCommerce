@@ -1,19 +1,45 @@
-<div class='bold-line'></div>
-<div class='container'>
-    <div class='window'>
-        <div class='overlay'></div>
-        <div class='content'>
-            <div class='welcome'>Registrati!</div>
-            <!--<div class='subtitle'>Per non perdere nessuna offerta del nostro sito</div>-->
-            <div class='input-fields'>
-                <input type='text' placeholder='Username' class='input-line full-width' #username>
-                <input type='text' placeholder='Name' class='input-line full-width' #name>
-                <input type='text' placeholder='Surname' class='input-line full-width' #surname>
-                <input type='password' placeholder='Password' class='input-line full-width' #psw>
-            </div>
-            <div><button class='ghost-round-2 full-width-2' (click)="signup(username.value, name.value, surname.value, psw.value)">Registrati</button></div>
-            <div class='spacing'>hai già un <span class='highlight' routerLink="/login">Account</span>?</div>
-            <div><button class='ghost-round full-width' routerLink="/login">Effettua il Login</button></div>
+<div class="bg-contact2" >
+    <div class="container-contact2">
+        <div class="wrap-contact2">
+            <form class="contact2-form validate-form">
+                <span class="contact2-form-title">
+                    Registrati
+                </span>
+
+                <div class="wrap-input2 validate-input" data-validate="Name is required">
+                    <input type='text' placeholder='USERNAME' class="input2" #username>
+                </div>
+
+                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input type='text' placeholder='NAME' class="input2" #name>
+                </div>
+
+                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input type='text' placeholder='SURNAME' class="input2" #surname>
+                </div>
+
+                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input type='password' placeholder='PASSWORD' class="input2" #psw>
+                </div>
+
+                <div class="container-contact2-form-btn">
+                    <div class="wrap-contact2-form-btn">
+                        <div class="contact2-form-bgbtn"></div>
+                        <button class="contact2-form-btn" (click)="signup(username.value, name.value, surname.value, psw.value)">
+                            Registrati
+                        </button>
+                    </div>
+                </div>
+                <div><p class="register">Hai già un account?</p></div>
+                <div class="container-contact2-form-btn">
+                    <div class="wrap-contact2-form-btn">
+                        <div class="contact2-form-bgbtn"></div>
+                        <button class="contact2-form-btn" routerLink="/login">
+                            Esegui il Login
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

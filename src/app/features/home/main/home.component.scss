@@ -1,5 +1,8 @@
 //.all {}
-
+h1 {
+    text-align: center;
+    color: white;
+}
 ngb-carousel {
     width: 65%;
     margin-left: auto;
@@ -112,4 +115,19 @@ button:hover span {
 .icart {
     height: 40px;
     border: 0;
+}
+
+.marche {
+    height: 30%;
+    width: 30%;
+}
+
+.menuMarche {
+    padding: 20px;
+}
+
+.menuMarche img {
+    align-content: center;
+    padding: 20px;
+    border: none;
 }

@@ -1,8 +1,60 @@
-<div *ngIf="currentRoute!='/login' && currentRoute!='/register'" class="wrapper">
+<div *ngIf="currentRoute!='/login' && currentRoute!='/register'" class="wrapper menu">
 
     <ng-container>
-        <div [routerLink]="'/home'" class="one" *ngIf="currentRoute!='/home'">Home</div>
-        <div [routerLink]="'/cart'" routerLinkActive="active" class="seven">Carrello</div>
+        <div [routerLink]="'/home'" class="one" *ngIf="currentRoute!='/home'">
+            <span class="iconahome"></span>
+            Home
+        </div>
+        <p class="two titolo">Andrea's Shop</p>
+        <div [routerLink]="'/cart'" class="seven" *ngIf="currentRoute!='/cart'">
+            <span class="icart"></span>
+            Carrello
+        </div>
+        <!--<div class="cart" *ngIf="cart==true">
+            <span alt="" class="icart"></span>
+            <span class="items" routerLink="/cart">Carrello
+                <ng-container *ngIf="products.length>0">
+                    ({{products.length}})
+                </ng-container>
+            </span>
+            <ng-container *ngIf="products.length>0;else empty">
+                <ng-container *ngFor="let item of products; let i=index">
+                    <table class="products" *ngIf="i<3">
+                        <tr>
+                            <td class="left">Squadra</td>
+                            <td class="strongs">{{item?.team}}</td>
+                        </tr>
+                        <tr>
+                            <td class="left">Champions</td>
+                            <td class="strongs">{{item?.champions ?'Sì' : 'No'}}</td>
+                        </tr>
+                        <tr>
+                            <td class="left">Nome</td>
+                            <td class="strongs">{{item?.player}}</td>
+                        </tr>
+                        <tr>
+                            <td class="left">Colore</td>
+                            <td class="strongs">{{item?.color}}</td>
+                        </tr>
+                        <tr>
+                            <td class="left">Prezzo</td>
+                            <td class="strongs">{{item?.price}}</td>
+                        </tr>
+                        <p class="remove" (click)="rimuovi(item.id)">Rimuovi</p>
+                    </table>
+                </ng-container>
+                <p class="ecc products" routerLink="/cart" *ngIf="products.length>3">...</p>
+                <p class="tooItems" routerLink="/cart" *ngIf="products.length>=3">Vai al Carrello</p>
+            </ng-container>
+            <ng-template #empty>
+                <table class="products">
+                    <tr>
+                        <td class="empty">Carrello vuoto</td>
+                    </tr>
+                </table>
+            </ng-template>
+    
+        </div>-->
         <div (click)="logout()" class="eight">Esci</div>
     </ng-container>
 
