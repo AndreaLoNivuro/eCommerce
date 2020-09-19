@@ -1,45 +1,58 @@
-<div class="bg-contact2" >
-    <div class="container-contact2">
-        <div class="wrap-contact2">
-            <form class="contact2-form validate-form">
-                <span class="contact2-form-title">
-                    Registrati
-                </span>
+<div class="left">
+    <img class="login" src="../../../assets/sfondi/login.jpg">
+</div>
+<div class="right">
+    <div class="bg-contact2" >
+        <div class="container-contact2">
+            <div class="wrap-contact2">
+                <form class="contact2-form validate-form">
+                    <span class="contact2-form-title">
+                        REGISTRAZIONE
+                    </span>
 
-                <div class="wrap-input2 validate-input" data-validate="Name is required">
-                    <input type='text' placeholder='USERNAME' class="input2" #username>
-                </div>
-
-                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input type='text' placeholder='NAME' class="input2" #name>
-                </div>
-
-                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input type='text' placeholder='SURNAME' class="input2" #surname>
-                </div>
-
-                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input type='password' placeholder='PASSWORD' class="input2" #psw>
-                </div>
-
-                <div class="container-contact2-form-btn">
-                    <div class="wrap-contact2-form-btn">
-                        <div class="contact2-form-bgbtn"></div>
-                        <button class="contact2-form-btn" (click)="signup(username.value, name.value, surname.value, psw.value)">
-                            Registrati
-                        </button>
+                    <div class="wrap-input2 validate-input" data-validate="Name is required">
+                        <input type='text' placeholder='USERNAME' class="input2" #username>
                     </div>
-                </div>
-                <div><p class="register">Hai già un account?</p></div>
-                <div class="container-contact2-form-btn">
-                    <div class="wrap-contact2-form-btn">
-                        <div class="contact2-form-bgbtn"></div>
-                        <button class="contact2-form-btn" routerLink="/login">
-                            Esegui il Login
-                        </button>
+
+                    <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <input type='text' placeholder='NAME' class="input2" #name>
                     </div>
-                </div>
-            </form>
+
+                    <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <input type='text' placeholder='SURNAME' class="input2" #surname>
+                    </div>
+
+                    <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <input type='password' placeholder='PASSWORD' class="input2" #psw>
+                    </div>
+
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <div class="container-contact2-form-btn">
+                                    <div class="wrap-contact2-form-btn">
+                                        <div class="contact2-form-bgbtn"></div>
+                                        <button class="contact2-form-btn" routerLink="/login">
+                                            INDIETRO
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="container-contact2-form-btn">
+                                    <div class="wrap-contact2-form-btn">
+                                        <div class="contact2-form-bgbtn"></div>
+                                        <button class="contact2-form-btn" (click)="signup(username.value, name.value, surname.value, psw.value)">
+                                            REGISTRATI
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
         </div>
     </div>
 </div>

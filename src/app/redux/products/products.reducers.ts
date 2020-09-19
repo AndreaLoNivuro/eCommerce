@@ -4,17 +4,17 @@ import { initProduct } from './products.action';
 
 export interface ProductsState {
     products: Products[];
-  }
-  
-  export const initialState: ProductsState = {
+}
+
+export const initialState: ProductsState = {
     products: []
-  };
-  
-  export const productsReducer = createReducer(
+};
+
+export const productsReducer = createReducer(
     initialState,
-    on(initProduct, (state, {products}) => ({...state, products: products})),
-  );
-  
-  export function reducer(state: ProductsState | undefined, action: Action) {
+    on(initProduct, (state, { products }) => ( { ...state, products: products } )),
+);
+
+export function reducer(state: ProductsState | undefined, action: Action) {
     return productsReducer(state, action);
-  }
+}

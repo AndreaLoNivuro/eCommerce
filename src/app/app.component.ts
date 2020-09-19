@@ -8,20 +8,5 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'eCommerce';
-  //sfondoBianco = true;
-  //isLog: string = sessionStorage.getItem('user');
-  currentRoute: string = null;
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-    this.router.events.subscribe(value => {
-      this.currentRoute = this.router.url.toString();
-    });
-  }
-
-  isLog(): boolean {
-    if (this.currentRoute === "/login" || this.currentRoute === "/register") 
-    return true
-  }
+  
 }

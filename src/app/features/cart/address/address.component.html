@@ -1,1 +1,86 @@
-<p>address works!</p>
+<div class="bg-contact2" >
+    <div class="container-contact2">
+        <div class="wrap-contact2">
+            <form class="contact2-form validate-form" [formGroup]="formSpedizione" (ngSubmit)="goCheckout()">
+                <span class="contact2-form-title">
+                    DATI SPEDIZIONE
+                </span>
+
+                <div class="wrap-input2 validate-input" data-validate="Name is required">
+                    <input class="input2" type="text" formControlName="nome" placeholder="NOME">
+                </div>
+
+                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input2" type="text" formControlName="cognome" placeholder="COGNOME">
+                </div>
+
+                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input2" type="text" formControlName="cellulare" placeholder="CELLULARE">
+                </div>
+
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <input class="input2" type="text" formControlName="citta" placeholder="CITTA'">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <input class="input2" type="tel" formControlName="cap" placeholder="CAP">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 80%;">
+                            <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <input class="input2" type="text" formControlName="indirizzo" placeholder="INDIRIZZO">
+                            </div>
+                        </td>
+                        <td style="width: 20%;">
+                            <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <input class="input2" type="text" formControlName="numerocivico" placeholder="N°">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input2" type="text" formControlName="informazioni" placeholder="INFORMAZIONI PER IL CORRIERE">
+                </div>
+                
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <div class="container-contact2-form-btn">
+                                <div class="wrap-contact2-form-btn">
+                                    <div class="contact2-form-bgbtn"></div>
+                                    <button class="contact2-form-btn" routerLink="/cart">
+                                        INDIETRO
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- spazio per i tre pallini -->
+                        </td>
+                        <td>
+                            <div class="container-contact2-form-btn">
+                                <div class="wrap-contact2-form-btn">
+                                    <div class="contact2-form-bgbtn"></div>
+                                    <button class="contact2-form-btn" type="submit">
+                                        CHECKOUT
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,12 +1,18 @@
-<h1>Scegli la marca che preferisci!
-  <div class="menuMarche">
-    <img src="../../../assets/logo/superga.png" alt="superga" (click)="cambiaLista('superga')" class="marche">
-    <img src="../../../assets/logo/adidas.jpg" alt="adidas" (click)="cambiaLista('adidas')" class="marche">
-    <img src="../../../assets/logo/vans.jpg" alt="vans" (click)="cambiaLista('vans')" class="marche">
-  </div>
-</h1>
+<div class="left">
+  <h1>
+    <div class="menuMarche">
+      <img src="../../../assets/logo/superga.png" alt="superga" (click)="cambiaLista('superga')" class="marche">
+      <img src="../../../assets/logo/adidas.jpg" alt="adidas" (click)="cambiaLista('adidas')" class="marche">
+      <img src="../../../assets/logo/vans.jpg" alt="vans" (click)="cambiaLista('vans')" class="marche">
+    </div>
+  </h1>
+</div>
 
-<div [ngSwitch]="listaToShow">
+
+<div [ngSwitch]="listaToShow" class="right">
+  <div *ngSwitchCase="''">
+    <img src="../../../assets/sfondi/sfondohome.jpg">
+  </div>
   <div *ngSwitchCase="'superga'">
     <ngb-carousel >
       <ng-template ngbSlide *ngFor="let product of productsSuperga | async">
@@ -14,7 +20,6 @@
           <img [src]="product.img" alt="Random first slide">
         </div>
         <div class="carousel-caption">
-          <h3>{{ product.marca }}</h3>
           <p>{{ product.colore }}</p>
         </div>
       </ng-template>
@@ -31,7 +36,6 @@
           <img [src]="product.img" alt="Random first slide">
         </div>
         <div class="carousel-caption">
-          <h3>{{ product.marca }}</h3>
           <p>{{ product.colore }}</p>
         </div>
       </ng-template>
@@ -48,7 +52,6 @@
           <img [src]="product.img" alt="Random first slide">
         </div>
         <div class="carousel-caption">
-          <h3>{{ product.marca }}</h3>
           <p>{{ product.colore }}</p>
         </div>
       </ng-template>

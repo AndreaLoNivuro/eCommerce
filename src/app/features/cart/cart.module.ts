@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './main/cart.component';
@@ -9,9 +8,12 @@ import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
-  declarations: [CartComponent, AddressComponent, PaymentComponent],
+  declarations: [
+    CartComponent,
+    AddressComponent,
+    PaymentComponent
+  ],
   imports: [
-    CommonModule,
     CartRoutingModule,
     SharedModule
   ]

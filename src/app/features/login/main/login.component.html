@@ -1,37 +1,42 @@
-<div class="bg-contact2" >
-    <div class="container-contact2">
-        <div class="wrap-contact2">
-            <form class="contact2-form validate-form" [formGroup]="loginForm" (ngSubmit)="doLogin()">
-                <span class="contact2-form-title">
-                    Login
-                </span>
+<div class="left">
+    <img class="login" src="../../../assets/sfondi/login.jpg">
+</div>
+<div class="right">
+    <div class="bg-contact2" >
+        <div class="container-contact2">
+            <div class="wrap-contact2">
+                <form class="contact2-form validate-form" [formGroup]="loginForm" (ngSubmit)="doLogin()">
+                    <span class="contact2-form-title">
+                        LOGIN
+                    </span>
 
-                <div class="wrap-input2 validate-input" data-validate="Name is required">
-                    <input class="input2" type="text" formControlName="username" placeholder="USERNAME">
-                </div>
+                    <div class="wrap-input2 validate-input" data-validate="Name is required">
+                        <input class="input2" type="text" formControlName="username" placeholder="USERNAME">
+                    </div>
 
-                <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input2" type="password" formControlName="password" placeholder="PASSWORD">
-                </div>
-                
-                <div class="container-contact2-form-btn">
-                    <div class="wrap-contact2-form-btn">
-                        <div class="contact2-form-bgbtn"></div>
-                        <button class="contact2-form-btn" type="submit">
-                            Entra
-                        </button>
+                    <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <input class="input2" type="password" formControlName="password" placeholder="PASSWORD">
                     </div>
-                </div>
-                <div><p class="register">Non sei registrato?</p></div>
-                <div class="container-contact2-form-btn">
-                    <div class="wrap-contact2-form-btn">
-                        <div class="contact2-form-bgbtn"></div>
-                        <button class="contact2-form-btn" routerLink="/register">
-                            Registrati
-                        </button>
+                    
+                    <div class="container-contact2-form-btn">
+                        <div class="wrap-contact2-form-btn">
+                            <div class="contact2-form-bgbtn"></div>
+                            <button class="contact2-form-btn" type="submit">
+                                ENTRA
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                    <div><p class="register">Non sei registrato?</p></div>
+                    <div class="container-contact2-form-btn">
+                        <div class="wrap-contact2-form-btn">
+                            <div class="contact2-form-bgbtn"></div>
+                            <button class="contact2-form-btn" routerLink="/register">
+                                REGISTRATI
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
