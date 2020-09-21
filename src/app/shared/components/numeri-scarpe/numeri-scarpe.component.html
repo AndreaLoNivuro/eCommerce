@@ -1,0 +1,6 @@
+<span
+class="dot" 
+*ngFor="let number of numbers" 
+(click)="selectNumber(number)" 
+[ngClass]="{'selected': number === value, 'no-selected': number != value}"
+> {{ number }} </span>

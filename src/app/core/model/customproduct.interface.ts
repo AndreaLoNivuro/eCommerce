@@ -1,10 +1,9 @@
 import { Products } from './products.interface';
 
-export interface Cart {
+export interface CustomProduct {
     prodotto: Products;
     chiusura: string;
-    colore: string;
+    numero: string;
     testo?: string;
     coloretesto?: string;
-    img: string;
   }

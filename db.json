@@ -336,5 +336,8 @@
       "prezzo": 50,
       "marca": "vans"
     }
-  ]
+  ],
+  "cart": [
+  ],
+  "acquisti": []
 }

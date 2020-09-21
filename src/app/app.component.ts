@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { retrieveAllProducts } from './redux/products/products.action';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'eCommerce';
-  
+  constructor(private store: Store) {
+  }
+  ngOnInit(): void {
+    this.store.dispatch(retrieveAllProducts())
+  }
 }

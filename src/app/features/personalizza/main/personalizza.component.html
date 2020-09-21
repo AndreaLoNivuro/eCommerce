@@ -1,1 +1,58 @@
-<p>personalizza works!</p>
+<div class="bg-contact2" >
+    <div class="container-contact2">
+        <div class="wrap-contact2">
+            <div class="left">
+                <img [src]=[img] style="width: 100%; padding-right: 20px;">
+            </div>
+            <div class="right">
+                <form class="contact2-form validate-form" [formGroup]="personalizzaForm" (ngSubmit)="add()">
+                    <span class="contact2-form-title">
+                        PERSONALIZZA IL TUO PRODOTTO
+                    </span>
+
+                    <div class="cva">
+                        <app-tipo-chiusura formControlName="chiusura"></app-tipo-chiusura>
+                    </div>
+
+                    <div class="cva">
+                        <app-numeri-scarpe [numbers]="productNumbers" formControlName="numero" class="numeri"></app-numeri-scarpe>
+                    </div>
+
+                    <div class="wrap-input2 validate-input">
+                        <input class="input2" type="text" formControlName="testo" placeholder="TESTO">
+                    </div>
+
+                    <div class="cva">
+                        <app-colore-testo formControlName="coloretesto"></app-colore-testo>
+                    </div>
+
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <div class="container-contact2-form-btn">
+                                    <div class="wrap-contact2-form-btn">
+                                        <div class="contact2-form-bgbtn"></div>
+                                        <button class="contact2-form-btn" (click)="ripristina()">
+                                            RIPRISTINA
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="container-contact2-form-btn">
+                                    <div class="wrap-contact2-form-btn">
+                                        <div class="contact2-form-bgbtn"></div>
+                                        <button class="contact2-form-btn" type="submit">
+                                            AGGIUNGI
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

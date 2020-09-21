@@ -18,6 +18,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { LoginEffects } from './redux/users/login.effects';
 import { ProductsEffects } from './redux/products/products.effects';
 import { CartEffects } from './redux/cart/cart.effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CartEffects } from './redux/cart/cart.effects';
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
     NgbModule,
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

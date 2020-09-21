@@ -47,7 +47,7 @@ img {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(80px, auto);
+    grid-auto-rows: minmax(80px, 80px);
     }
 
 .one {
@@ -57,26 +57,6 @@ img {
 
 .two {
     grid-column: 2/7;
-    grid-row: 1;
-    }
-
-.three {
-    grid-column: 3;
-    grid-row: 1;
-    }
-
-.four {
-    grid-column: 4;
-    grid-row: 1;
-    }
-
-.five {
-    grid-column: 5;
-    grid-row: 1;
-    }
-
-.six {
-    grid-column: 6;
     grid-row: 1;
     }
 
@@ -109,7 +89,7 @@ img {
 }
 
 .titolo {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
     font-size: 50px;
     color: white;

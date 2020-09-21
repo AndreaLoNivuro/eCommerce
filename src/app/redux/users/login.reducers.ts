@@ -8,7 +8,7 @@ export interface UsersState {
 }
 
 export const initialState: UsersState = {
-    currentUser: null,
+    currentUser: JSON.parse(sessionStorage.getItem('utente'))as User,
     errorMessage: null
 };
 

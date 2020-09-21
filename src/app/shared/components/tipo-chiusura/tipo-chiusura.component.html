@@ -1,0 +1,5 @@
+<span 
+*ngFor="let chiusura of chiusure" 
+(click)="selectTipoChiusura(chiusura)" 
+[ngClass]="{'selected': chiusura === value, 'no-selected': chiusura != value}"
+> {{ chiusura }} </span>

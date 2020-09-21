@@ -9,12 +9,48 @@
 </div>
 
 
+<div class="right">
+  <div *ngIf="listaToShow === '' ">
+    <img src="../../../assets/sfondi/sfondohome.jpg" class="imm1">
+  </div>
+  
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let product of products | async">
+          <div>
+            <div class="picsum-img-wrapper">
+              <img [src]="product.img" alt="Random first slide">
+            </div>
+            <div class="carousel-caption" >
+              <p>{{ product.colore }}</p>
+            </div>
+          </div>
+          <div class="bott">
+            <button [routerLink]="['/personalizza', product.id]">Personalizza ora</button>
+          </div>
+      </ng-template>
+    </ngb-carousel>
+</div>
+
+
+<!-- <div class="left">
+  <h1>
+    <div class="menuMarche">
+      <img src="../../../assets/logo/superga.png" alt="superga" (click)="cambiaLista('superga')" class="marche">
+      <img src="../../../assets/logo/adidas.jpg" alt="adidas" (click)="cambiaLista('adidas')" class="marche">
+      <img src="../../../assets/logo/vans.jpg" alt="vans" (click)="cambiaLista('vans')" class="marche">
+    </div>
+  </h1>
+</div>
+
+
 <div [ngSwitch]="listaToShow" class="right">
   <div *ngSwitchCase="''">
-    <img src="../../../assets/sfondi/sfondohome.jpg">
+    <img src="../../../assets/sfondi/sfondohome.jpg" class="imm1">
   </div>
   <div *ngSwitchCase="'superga'">
-    <ngb-carousel >
+    Active id: {{c.activeId}}
+    
+    <ngb-carousel #c="ngbCarousel">
       <ng-template ngbSlide *ngFor="let product of productsSuperga | async">
         <div class="picsum-img-wrapper">
           <img [src]="product.img" alt="Random first slide">
@@ -25,12 +61,13 @@
       </ng-template>
     </ngb-carousel>
     <div class="bott">
-      <button [routerLink]="'/personalizza'">Personalizza ora</button>
+      <button (click)="idslide(c.activeId, listaToShow)">Personalizza ora</button>
     </div>
   </div>
 
   <div *ngSwitchCase="'vans'">
-    <ngb-carousel>
+    Active id: {{c.activeId}}
+    <ngb-carousel #c="ngbCarousel">
       <ng-template ngbSlide *ngFor="let product of productsVans | async">
         <div class="picsum-img-wrapper">
           <img [src]="product.img" alt="Random first slide">
@@ -41,12 +78,13 @@
       </ng-template>
     </ngb-carousel>
     <div class="bott">
-      <button [routerLink]="'/personalizza'">Personalizza ora</button>
+      <button (click)="idslide(c.activeId, listaToShow)">Personalizza ora</button>
     </div>
   </div>
 
   <div *ngSwitchCase="'adidas'">
-    <ngb-carousel>
+    Active id: {{c.activeId}}
+    <ngb-carousel #c="ngbCarousel">
       <ng-template ngbSlide *ngFor="let product of productsAdidas | async">
         <div class="picsum-img-wrapper">
           <img [src]="product.img" alt="Random first slide">
@@ -57,7 +95,7 @@
       </ng-template>
     </ngb-carousel>
     <div class="bott">
-      <button [routerLink]="'/personalizza'">Personalizza ora</button>
+      <button (click)="idslide(c.activeId, listaToShow)">Personalizza ora</button>
     </div>
   </div>
-</div>
+</div> -->
