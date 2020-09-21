@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Observable } from 'rxjs';
-import { switchMap, map, withLatestFrom } from 'rxjs/operators';
+import { switchMap, map, withLatestFrom, filter, find } from 'rxjs/operators';
 import { HttpCommunicationService } from 'src/app/core/HttpCommunication/http-communication.service';
 import { Action, select, Store } from '@ngrx/store';
 import { CustomProduct } from 'src/app/core/model/customproduct.interface';
 import { addItem, addItemSuccess, initCart, removeItem, removeItemSuccess, retrieveAllCart } from './cart.action';
 import { getCurrentUser } from '../users';
-import { selectCartState } from '.';
-import { Products } from 'src/app/core/model/products.interface';
+import { getCartProducts, selectCartState } from '.';
 
 @Injectable()
 export class CartEffects {
@@ -38,28 +37,24 @@ export class CartEffects {
 
     addToCart$: Observable<Action> = createEffect(() => this.actions$.pipe(
         ofType(addItem),
-        //switchMap(action=>this.registerUser(action.product, action.chiusura, action.numero, action.testo, action.coloreTesto).pipe(
-        switchMap((action) => this.http.retrievePostCall("cart",action.customProduct).pipe(
-            
+        withLatestFrom(this.store.pipe(select(getCurrentUser))),
+        switchMap(([action, user]) => this.http.retrievePostCall("cart", {
+            "userId": user.id,
+            "prodotto": action.customProduct.prodotto,
+            "chiusura": action.customProduct.chiusura,
+            "numero": action.customProduct.numero,
+            "testo": action.customProduct.testo,
+            "coloretesto": action.customProduct.coloretesto
+        }).pipe(
             map((customProduct: CustomProduct) => addItemSuccess({customProduct: customProduct}))
-            //map((formatCustomProduct) => addItemSuccess({customProduct: formatCustomProduct}))
         ))
     ));
 
-    // signUpUser$=createEffect(()=>this.actions$.pipe(
-    //     ofType(signUpUser),
-    //     switchMap(action=>this.registerUser(action.username, action.name, action.surname, action.password).pipe(
-    //     tap(user=> console.log(user)),
-    //     switchMap(user=>of(this.formatUser(user)).pipe(
-    //     map( (formattedUser) => signUpUserSuccess({ user: formattedUser }))
-    //     ))
+    // removeProducts$: Observable<Action> = createEffect(()=>this.actions$.pipe(
+    //     ofType(removeItem),
+    //     withLatestFrom(this.store.pipe(select(getCurrentUser)), this.store.pipe(select(getCartProducts))),
+    //     switchMap(([action, user, cart])=> this.http.retrieveDeleteCall("cart").pipe(
+    //         map(customProduct => removeItemSuccess({ user.id, customProduct }))
     //     ))
     // ));
-
-    removeProducts$: Observable<Action> = createEffect(()=>this.actions$.pipe(
-        ofType(removeItem),
-        switchMap(action=> this.http.retrieveDeleteCall<Products[]>("products/"+action.id).pipe(
-            map(products => removeItemSuccess({ id: action.id }))
-        ))
-    ));
 }

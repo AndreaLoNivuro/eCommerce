@@ -338,6 +338,56 @@
     }
   ],
   "cart": [
+    {
+      "userId": 0,
+      "prodotto": {
+        "id": 6,
+        "colore": "Blu",
+        "img": "assets/scarpe/adidas/adidasBlu.jpg",
+        "number": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        "prezzo": 50,
+        "marca": "adidas"
+      },
+      "chiusura": "Strappi",
+      "numero": 37,
+      "testo": "ciao",
+      "coloretesto": "white",
+      "id": 1
+    },
+    {
+      "userId": 0,
+      "prodotto": {
+        "id": 12,
+        "colore": "Azzurro",
+        "img": "assets/scarpe/vans/vansAzzurre.jpg",
+        "number": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        "prezzo": 50,
+        "marca": "vans"
+      },
+      "chiusura": "Strappi",
+      "numero": 37,
+      "testo": "hola",
+      "coloretesto": "white",
+      "id": 2
+    }
   ],
   "acquisti": []
 }

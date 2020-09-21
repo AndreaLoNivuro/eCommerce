@@ -10,5 +10,7 @@ export const addItemSuccess = createAction('[Cart] add item success', props<{cus
 
 export const removeItem = createAction('[Cart] remove item', props<{id: number}>());
 export const removeItemSuccess = createAction('[Cart] remove item', props<{id: number}>());
+// export const removeItem = createAction('[Cart] remove item', props<{userId: number, customProduct: CustomProduct}>());
+// export const removeItemSuccess = createAction('[Cart] remove item', props<{userId: number, customProduct: CustomProduct}>());
 
 export const removeAllItem = createAction('[Cart] remove all item');

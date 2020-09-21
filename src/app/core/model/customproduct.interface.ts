@@ -6,4 +6,6 @@ export interface CustomProduct {
     numero: string;
     testo?: string;
     coloretesto?: string;
+    id: number;
+    userId: number;
   }

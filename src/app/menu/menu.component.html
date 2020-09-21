@@ -6,7 +6,7 @@
             Home
         </div>
         <p class="two titolo">Andrea's Shop</p>
-        <div [routerLink]="'/cart'" class="seven" *ngIf="currentRoute!='/cart'">
+        <div [routerLink]="['/cart', currentUserId]" class="seven" *ngIf="currentRoute!='/cart/'+currentUserId">
             <span class="icart"></span>
             Carrello
         </div>

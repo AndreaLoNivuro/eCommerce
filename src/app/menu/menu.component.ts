@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { User } from '../core/model/user.interface';
+import { getCurrentUser } from '../redux/users';
 
 @Component({
   selector: 'app-menu',
@@ -9,15 +13,23 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   currentRoute: string = null;
+  currentUserId: number;
 
-  constructor(private router: Router) { 
+  get user(): Observable<User> {
+    return this.store.pipe(select(getCurrentUser));
+  }
+
+  constructor(private router: Router, private store: Store) { 
     this.router.events.subscribe(value => {
       this.currentRoute = this.router.url.toString();
     });
   }
 
   ngOnInit(): void {
-    
+    this.user.subscribe(currentUser => {
+      this.currentUserId = currentUser.id
+      console.log(this.currentUserId)
+    })
   }
 
   logout() {

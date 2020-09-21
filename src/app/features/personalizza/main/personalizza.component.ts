@@ -5,9 +5,11 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CustomProduct } from 'src/app/core/model/customproduct.interface';
 import { Products } from 'src/app/core/model/products.interface';
+import { User } from 'src/app/core/model/user.interface';
 import { getCurrentNavigatedProduct } from 'src/app/redux/products';
 import { retrieveAllProducts } from 'src/app/redux/products/products.action';
 import { ProductsEffects } from 'src/app/redux/products/products.effects';
+import { getCurrentUser } from 'src/app/redux/users';
 import { PersonalizzaService } from '../services/personalizza.service';
 
 @Component({
@@ -21,9 +23,14 @@ export class PersonalizzaComponent implements OnInit {
   prodotto: Products;
   img: string = "";
   productNumbers: number[] = [];
+  currentUserId: number;
   
   get product(): Observable<Products> {
     return this.store.pipe(select(getCurrentNavigatedProduct));
+  }
+
+  get user(): Observable<User> {
+    return this.store.pipe(select(getCurrentUser));
   }
   constructor(fb: FormBuilder, private personalizzaService: PersonalizzaService, private store: Store, private router: Router) {
     this.personalizzaForm = fb.group({
@@ -44,6 +51,10 @@ export class PersonalizzaComponent implements OnInit {
       this.productNumbers = productSelected.number;
       console.log(this.img);
     });
+
+    this.user.subscribe(user => {
+      this.currentUserId = user.id;
+    })
   }
   
   ripristina() {
@@ -58,7 +69,7 @@ export class PersonalizzaComponent implements OnInit {
     };
     console.log(cartProduct);
     this.personalizzaService.addToCart(cartProduct);
-    this.router.navigateByUrl('/cart');
+    this.router.navigateByUrl('/cart/'+this.currentUserId);
   }
 
 }

@@ -27,8 +27,16 @@ export class HttpCommunicationService {
     } : undefined));
   }
 
-  retrieveDeleteCall<T>(endpoint: string): Observable<T> {
-    return this.retrieveHttpCall<T>(new HttpRequest<T>('DELETE', this.host + endpoint));
+  // retrieveDeleteCall<T>(endpoint: string): Observable<T> {
+  //   return this.retrieveHttpCall<T>(new HttpRequest<T>('DELETE', this.host + endpoint));
+  // }
+
+  retrieveDeleteCall<T>(endpoint: string, params: { [key: string]: string } = null): Observable<T> {
+    return this.retrieveHttpCall<T>(new HttpRequest<T>('DELETE', this.host + endpoint, params ? {
+      params: new HttpParams({
+        fromObject: params
+      })
+    } : undefined));
   }
 
   private retrieveHttpCall<T>(httpRequest: HttpRequest<T>): Observable<T> {
