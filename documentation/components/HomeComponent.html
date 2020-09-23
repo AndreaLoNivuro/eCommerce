@@ -1,0 +1,936 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>e-commerce documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">e-commerce documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HomeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/home/main/home.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code>NgbCarouselConfig</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-home</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./home.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./home.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#listaToShow">listaToShow</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cambiaLista">cambiaLista</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#products">products</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(store: Store, config: NgbCarouselConfig, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/features/home/main/home.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                    <code>Store</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>config</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbCarouselConfig</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cambiaLista"></a>
+                    <span class="name">
+                        <b>
+                            cambiaLista
+                        </b>
+                        <a href="#cambiaLista"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cambiaLista(lista: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/features/home/main/home.component.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lista</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/features/home/main/home.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaToShow"></a>
+                        <span class="name">
+                            <b>
+                            listaToShow</b>
+                            <a href="#listaToShow"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/features/home/main/home.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="products"></a>
+                        <span class="name"><b>products</b><a href="#products"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>products()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/features/home/main/home.component.ts:35</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { NgbCarouselConfig } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+import { select, Store } from &#x27;@ngrx/store&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { Products } from &#x27;src/app/core/model/products.interface&#x27;;
+import { selectProducts, selectProductsByMarca } from &#x27;src/app/redux/products&#x27;;
+import { retrieveAllProducts } from &#x27;src/app/redux/products/products.action&#x27;;
+
+@Component({
+  selector: &#x27;app-home&#x27;,
+  templateUrl: &#x27;./home.component.html&#x27;,
+  styleUrls: [&#x27;./home.component.scss&#x27;],
+  providers: [NgbCarouselConfig]
+})
+export class HomeComponent implements OnInit {
+
+  listaToShow: string &#x3D; &quot;&quot;;
+
+  cambiaLista(lista: string) {
+    this.listaToShow &#x3D; lista;
+  }
+
+  constructor(private store: Store, config: NgbCarouselConfig, private router: Router) {
+    // customize default values of carousels used by this component tree
+    config.interval &#x3D; 10000;
+    config.wrap &#x3D; false;
+    config.keyboard &#x3D; false;
+    config.pauseOnHover &#x3D; false;
+  }
+
+  ngOnInit(): void {
+  }
+
+  get products(): Observable&lt;Products[]&gt; {
+    return this.store.pipe(select(selectProductsByMarca, {marca: this.listaToShow}));
+  }
+}
+// import { Component, OnInit } from &#x27;@angular/core&#x27;;
+// import { Router } from &#x27;@angular/router&#x27;;
+// import { NgbCarouselConfig } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+// import { select, Store } from &#x27;@ngrx/store&#x27;;
+// import { Observable } from &#x27;rxjs&#x27;;
+// import { Products } from &#x27;src/app/core/model/products.interface&#x27;;
+// import { selectProducts, selectProductsByMarca } from &#x27;src/app/redux/products&#x27;;
+// import { retrieveAllProducts } from &#x27;src/app/redux/products/products.action&#x27;;
+
+// @Component({
+//   selector: &#x27;app-home&#x27;,
+//   templateUrl: &#x27;./home.component.html&#x27;,
+//   styleUrls: [&#x27;./home.component.scss&#x27;],
+//   providers: [NgbCarouselConfig]
+// })
+// export class HomeComponent implements OnInit {
+
+//   listaToShow: string &#x3D; &quot;&quot;;
+
+//   cambiaLista(lista: string) {
+//     this.listaToShow &#x3D; lista;
+//   }
+
+//   constructor(private store: Store, config: NgbCarouselConfig, private router: Router) {
+//     // customize default values of carousels used by this component tree
+//     config.interval &#x3D; 10000;
+//     config.wrap &#x3D; false;
+//     config.keyboard &#x3D; false;
+//     config.pauseOnHover &#x3D; false;
+//   }
+
+//   ngOnInit(): void {
+//     this.store.dispatch(retrieveAllProducts())
+//   }
+
+//   images &#x3D; [&quot;../../../assets/logo/superga.png&quot;, &quot;../../../assets/logo/adidas.jpg&quot;, &quot;../../../assets/logo/vans.jpg&quot;];
+  
+
+//   get products(): Observable&lt;Products[]&gt; {
+//     return this.store.pipe(select(selectProducts));
+//   }
+
+//   get productsSuperga(): Observable&lt;Products[]&gt; {
+//     return this.store.pipe(select(selectProductsByMarca, {marca: &quot;superga&quot;}));
+//   }
+
+//   get productsAdidas(): Observable&lt;Products[]&gt; {
+//     return this.store.pipe(select(selectProductsByMarca, {marca: &quot;adidas&quot;}));
+//   }
+
+//   get productsVans(): Observable&lt;Products[]&gt; {
+//     return this.store.pipe(select(selectProductsByMarca, {marca: &quot;vans&quot;}));
+//   }
+  
+//   idslide(id: string, lista: string) {
+//     console.log(id, lista)
+//     let slideId :number &#x3D; Number(id.substr(id.length - 1, id.length));
+//     console.log(slideId)
+//     switch (lista) {
+//       case &quot;superga&quot; : {
+//         this.productsSuperga.subscribe(products &#x3D;&gt; {
+//           let product &#x3D; products[slideId];
+//           console.log(product);
+//           this.router.navigateByUrl(&quot;personalizza/&quot; + product.id)
+//         })
+//          break;
+//       }
+//       case &quot;vans&quot; : {
+//         this.productsVans.subscribe(products &#x3D;&gt; {
+//           let product &#x3D; products[slideId];
+//           console.log(product);
+//           this.router.navigateByUrl(&quot;personalizza/&quot; + product.id)
+//         })
+//          break;
+//       }
+//       case &quot;adidas&quot; : {
+//         this.productsAdidas.subscribe(products &#x3D;&gt; {
+//           let product &#x3D; products[slideId];
+//           console.log(product);
+//           this.router.navigateByUrl(&quot;personalizza/&quot; + product.id)
+//         })
+//          break;
+//       }
+
+//     }
+//   }
+// }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;left&quot;&gt;
+  &lt;h1&gt;
+    &lt;div class&#x3D;&quot;menuMarche&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../assets/logo/superga.png&quot; alt&#x3D;&quot;superga&quot; (click)&#x3D;&quot;cambiaLista(&#x27;superga&#x27;)&quot; class&#x3D;&quot;marche&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../assets/logo/adidas.jpg&quot; alt&#x3D;&quot;adidas&quot; (click)&#x3D;&quot;cambiaLista(&#x27;adidas&#x27;)&quot; class&#x3D;&quot;marche&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../assets/logo/vans.jpg&quot; alt&#x3D;&quot;vans&quot; (click)&#x3D;&quot;cambiaLista(&#x27;vans&#x27;)&quot; class&#x3D;&quot;marche&quot;&gt;
+    &lt;/div&gt;
+  &lt;/h1&gt;
+&lt;/div&gt;
+
+
+&lt;div class&#x3D;&quot;right&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;listaToShow &#x3D;&#x3D;&#x3D; &#x27;&#x27; &quot;&gt;
+    &lt;img src&#x3D;&quot;../../../assets/sfondi/sfondohome.jpg&quot; class&#x3D;&quot;imm1&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;ngb-carousel&gt;
+      &lt;ng-template ngbSlide *ngFor&#x3D;&quot;let product of products | async&quot;&gt;
+          &lt;div&gt;
+            &lt;div class&#x3D;&quot;picsum-img-wrapper&quot;&gt;
+              &lt;img [src]&#x3D;&quot;product.img&quot; alt&#x3D;&quot;Random first slide&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;carousel-caption&quot; &gt;
+              &lt;p&gt;{{ product.colore }}&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;bott&quot;&gt;
+            &lt;button [routerLink]&#x3D;&quot;[&#x27;/personalizza&#x27;, product.id]&quot;&gt;Personalizza ora&lt;/button&gt;
+          &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/ngb-carousel&gt;
+&lt;/div&gt;
+
+
+&lt;!-- &lt;div class&#x3D;&quot;left&quot;&gt;
+  &lt;h1&gt;
+    &lt;div class&#x3D;&quot;menuMarche&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../assets/logo/superga.png&quot; alt&#x3D;&quot;superga&quot; (click)&#x3D;&quot;cambiaLista(&#x27;superga&#x27;)&quot; class&#x3D;&quot;marche&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../assets/logo/adidas.jpg&quot; alt&#x3D;&quot;adidas&quot; (click)&#x3D;&quot;cambiaLista(&#x27;adidas&#x27;)&quot; class&#x3D;&quot;marche&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../assets/logo/vans.jpg&quot; alt&#x3D;&quot;vans&quot; (click)&#x3D;&quot;cambiaLista(&#x27;vans&#x27;)&quot; class&#x3D;&quot;marche&quot;&gt;
+    &lt;/div&gt;
+  &lt;/h1&gt;
+&lt;/div&gt;
+
+
+&lt;div [ngSwitch]&#x3D;&quot;listaToShow&quot; class&#x3D;&quot;right&quot;&gt;
+  &lt;div *ngSwitchCase&#x3D;&quot;&#x27;&#x27;&quot;&gt;
+    &lt;img src&#x3D;&quot;../../../assets/sfondi/sfondohome.jpg&quot; class&#x3D;&quot;imm1&quot;&gt;
+  &lt;/div&gt;
+  &lt;div *ngSwitchCase&#x3D;&quot;&#x27;superga&#x27;&quot;&gt;
+    Active id: {{c.activeId}}
+    
+    &lt;ngb-carousel #c&#x3D;&quot;ngbCarousel&quot;&gt;
+      &lt;ng-template ngbSlide *ngFor&#x3D;&quot;let product of productsSuperga | async&quot;&gt;
+        &lt;div class&#x3D;&quot;picsum-img-wrapper&quot;&gt;
+          &lt;img [src]&#x3D;&quot;product.img&quot; alt&#x3D;&quot;Random first slide&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;carousel-caption&quot;&gt;
+          &lt;p&gt;{{ product.colore }}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/ngb-carousel&gt;
+    &lt;div class&#x3D;&quot;bott&quot;&gt;
+      &lt;button (click)&#x3D;&quot;idslide(c.activeId, listaToShow)&quot;&gt;Personalizza ora&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngSwitchCase&#x3D;&quot;&#x27;vans&#x27;&quot;&gt;
+    Active id: {{c.activeId}}
+    &lt;ngb-carousel #c&#x3D;&quot;ngbCarousel&quot;&gt;
+      &lt;ng-template ngbSlide *ngFor&#x3D;&quot;let product of productsVans | async&quot;&gt;
+        &lt;div class&#x3D;&quot;picsum-img-wrapper&quot;&gt;
+          &lt;img [src]&#x3D;&quot;product.img&quot; alt&#x3D;&quot;Random first slide&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;carousel-caption&quot;&gt;
+          &lt;p&gt;{{ product.colore }}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/ngb-carousel&gt;
+    &lt;div class&#x3D;&quot;bott&quot;&gt;
+      &lt;button (click)&#x3D;&quot;idslide(c.activeId, listaToShow)&quot;&gt;Personalizza ora&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngSwitchCase&#x3D;&quot;&#x27;adidas&#x27;&quot;&gt;
+    Active id: {{c.activeId}}
+    &lt;ngb-carousel #c&#x3D;&quot;ngbCarousel&quot;&gt;
+      &lt;ng-template ngbSlide *ngFor&#x3D;&quot;let product of productsAdidas | async&quot;&gt;
+        &lt;div class&#x3D;&quot;picsum-img-wrapper&quot;&gt;
+          &lt;img [src]&#x3D;&quot;product.img&quot; alt&#x3D;&quot;Random first slide&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;carousel-caption&quot;&gt;
+          &lt;p&gt;{{ product.colore }}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/ngb-carousel&gt;
+    &lt;div class&#x3D;&quot;bott&quot;&gt;
+      &lt;button (click)&#x3D;&quot;idslide(c.activeId, listaToShow)&quot;&gt;Personalizza ora&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; --&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./home.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.left {
+    width: 30%;
+    float: left;
+}
+.right {
+    width: 70%;
+    float: right;
+    display: initial;
+}
+
+// .imm1 {
+//     height: 100vh;
+// }
+
+// body {
+//     background-image: url(&quot;../../../assets/sfondi/sfondohome.jpg&quot;);
+//     //background-image: url(&quot;/assets/icone/cart.png&quot;);
+//     background-repeat: no-repeat;
+// }
+//.all {}
+h1 {
+    text-align: center;
+    color: white;
+}
+ngb-carousel {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    //margin-top: -155px;
+}
+
+img {
+    width: 100%;
+    //height: 100vh;
+    // border-top: 50px solid rgb(187, 187, 187);
+    // border-bottom: 50px solid rgb(187, 187, 187);
+    // border-left: 40px solid rgb(187, 187, 187);
+    // border-right: 40px solid rgb(187, 187, 187);
+}
+
+.bott {
+    text-align: center;
+    margin: 10px auto;
+}
+
+button {
+    margin: 0 auto;
+    outline: none;
+    text-decoration: none;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 60px;
+    width: 230px;
+    background-color: rgb(194, 168, 211);
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+}
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+//menu
+.menu {
+    background: linear-gradient(90deg, rgba(239, 213, 255, 1) 0%, rgba(81, 90, 218, 1) 100%);
+    height: 260px;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.strong {
+    font-weight: bolder;
+}
+
+.cart {
+    width: 150px;
+    position: absolute;
+    right: 3%;
+    top: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.icart {
+    height: 40px;
+    border: 0;
+}
+
+.marche {
+    height: 30%;
+    width: 95%;
+}
+
+.menuMarche {
+    padding: 20px;
+}
+
+.menuMarche img {
+    align-content: center;
+    padding: 20px;
+    border: none;
+}
+
+p {
+    color: black;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="left">  <h1>    <div class="menuMarche">      <img src="../../../assets/logo/superga.png" alt="superga" (click)="cambiaLista(\'superga\')" class="marche">      <img src="../../../assets/logo/adidas.jpg" alt="adidas" (click)="cambiaLista(\'adidas\')" class="marche">      <img src="../../../assets/logo/vans.jpg" alt="vans" (click)="cambiaLista(\'vans\')" class="marche">    </div>  </h1></div><div class="right">  <div *ngIf="listaToShow === \'\' ">    <img src="../../../assets/sfondi/sfondohome.jpg" class="imm1">  </div>      <ngb-carousel>      <ng-template ngbSlide *ngFor="let product of products | async">          <div>            <div class="picsum-img-wrapper">              <img [src]="product.img" alt="Random first slide">            </div>            <div class="carousel-caption" >              <p>{{ product.colore }}</p>            </div>          </div>          <div class="bott">            <button [routerLink]="[\'/personalizza\', product.id]">Personalizza ora</button>          </div>      </ng-template>    </ngb-carousel></div><!-- <div class="left">  <h1>    <div class="menuMarche">      <img src="../../../assets/logo/superga.png" alt="superga" (click)="cambiaLista(\'superga\')" class="marche">      <img src="../../../assets/logo/adidas.jpg" alt="adidas" (click)="cambiaLista(\'adidas\')" class="marche">      <img src="../../../assets/logo/vans.jpg" alt="vans" (click)="cambiaLista(\'vans\')" class="marche">    </div>  </h1></div><div [ngSwitch]="listaToShow" class="right">  <div *ngSwitchCase="\'\'">    <img src="../../../assets/sfondi/sfondohome.jpg" class="imm1">  </div>  <div *ngSwitchCase="\'superga\'">    Active id: {{c.activeId}}        <ngb-carousel #c="ngbCarousel">      <ng-template ngbSlide *ngFor="let product of productsSuperga | async">        <div class="picsum-img-wrapper">          <img [src]="product.img" alt="Random first slide">        </div>        <div class="carousel-caption">          <p>{{ product.colore }}</p>        </div>      </ng-template>    </ngb-carousel>    <div class="bott">      <button (click)="idslide(c.activeId, listaToShow)">Personalizza ora</button>    </div>  </div>  <div *ngSwitchCase="\'vans\'">    Active id: {{c.activeId}}    <ngb-carousel #c="ngbCarousel">      <ng-template ngbSlide *ngFor="let product of productsVans | async">        <div class="picsum-img-wrapper">          <img [src]="product.img" alt="Random first slide">        </div>        <div class="carousel-caption">          <p>{{ product.colore }}</p>        </div>      </ng-template>    </ngb-carousel>    <div class="bott">      <button (click)="idslide(c.activeId, listaToShow)">Personalizza ora</button>    </div>  </div>  <div *ngSwitchCase="\'adidas\'">    Active id: {{c.activeId}}    <ngb-carousel #c="ngbCarousel">      <ng-template ngbSlide *ngFor="let product of productsAdidas | async">        <div class="picsum-img-wrapper">          <img [src]="product.img" alt="Random first slide">        </div>        <div class="carousel-caption">          <p>{{ product.colore }}</p>        </div>      </ng-template>    </ngb-carousel>    <div class="bott">      <button (click)="idslide(c.activeId, listaToShow)">Personalizza ora</button>    </div>  </div></div> --></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'app-address'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'ColoreTestoComponent', 'selector': 'app-colore-testo'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NumeriScarpeComponent', 'selector': 'app-numeri-scarpe'},{'name': 'PaymentComponent', 'selector': 'app-payment'},{'name': 'PersonalizzaComponent', 'selector': 'app-personalizza'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'TipoChiusuraComponent', 'selector': 'app-tipo-chiusura'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomeComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
