@@ -1,8 +1,11 @@
+import { Params } from '@angular/router';
 import { createSelector } from '@ngrx/store';
 import { AppState } from '..';
+import { selectRouteParams } from '../router';
 import { UsersState } from './login.reducers';
 
 export const selectUsersState = (state: AppState) => state.usersState;
+export const selectAddressState = (state: AppState) => state.usersState.usersAddress;
 
 export const getCurrentUser = createSelector(
     selectUsersState,
@@ -12,4 +15,10 @@ export const getCurrentUser = createSelector(
 export const selectErrorMessage = createSelector(
     selectUsersState,
     (state: UsersState) => state.errorMessage
+);
+
+export const getCurrentNavigatedUserAddress = createSelector(
+    selectUsersState,
+    selectRouteParams,
+    (state: UsersState, params: Params) => state.usersAddress.find(item => item.userId === Number(params['id']))
 );

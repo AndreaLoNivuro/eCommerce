@@ -16,13 +16,27 @@ import { CartService } from '../services/cart.service';
 export class CartComponent implements OnInit {
 
   currentUserId: number;
-
+  numProd: number = 0;
+  totCart: number = 0;
+  
   get user(): Observable<User> {
     return this.store.pipe(select(getCurrentUser));
   }
 
   
-  constructor(private store: Store, private router: Router, private cartService: CartService) {
+  constructor(private store: Store, private router: Router) {
+    this.user.subscribe(currentUser => {
+      this.currentUserId = currentUser.id
+      console.log(this.currentUserId)
+      // console.log(this.cart)
+      // console.log(this.userCart);
+    });
+    this.userCart.subscribe(products => {
+      for (let product of products) {
+        this.totCart += product.prodotto.prezzo;
+        this.numProd += 1;
+      }
+    })
     
   }
   get cart(): Observable<CustomProduct[]> {
@@ -33,11 +47,6 @@ export class CartComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.user.subscribe(currentUser => {
-      this.currentUserId = currentUser.id
-      console.log(this.cart)
-      console.log(this.userCart);
-    })
   }
   
 

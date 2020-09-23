@@ -7,11 +7,11 @@
                 </span>
 
                 <div class="wrap-input2 validate-input" data-validate="Name is required">
-                    <input class="input2" type="text" formControlName="nome" placeholder="NOME">
+                    <input class="input2" type="text" placeholder="NOME" [value]="userName">
                 </div>
 
                 <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input2" type="text" formControlName="cognome" placeholder="COGNOME">
+                    <input class="input2" type="text" placeholder="COGNOME" [value]="userSurname">
                 </div>
 
                 <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -58,7 +58,7 @@
                             <div class="container-contact2-form-btn">
                                 <div class="wrap-contact2-form-btn">
                                     <div class="contact2-form-bgbtn"></div>
-                                    <button class="contact2-form-btn" routerLink="/cart">
+                                    <button class="contact2-form-btn" [routerLink]="['/cart', currentUserId]">
                                         INDIETRO
                                     </button>
                                 </div>
@@ -71,7 +71,7 @@
                             <div class="container-contact2-form-btn">
                                 <div class="wrap-contact2-form-btn">
                                     <div class="contact2-form-bgbtn"></div>
-                                    <button class="contact2-form-btn" type="submit">
+                                    <button class="contact2-form-btn" type="submit" [routerLink]="'payment'">
                                         CHECKOUT
                                     </button>
                                 </div>

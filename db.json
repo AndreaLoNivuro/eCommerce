@@ -20,13 +20,17 @@
       "surname": "Palmieri",
       "password": "andrea",
       "id": 2
-    },
+    }
+  ],
+  "usersAddress": [
     {
-      "username": "ciao",
-      "name": "ciao",
-      "surname": "ciao",
-      "password": "ciao",
-      "id": 3
+      "userId": 0,
+      "cellulare": "ciao",
+      "citta": "ciao",
+      "cap": "ciao",
+      "indirizzo": "cio",
+      "numerocivico": "5",
+      "id": 1
     }
   ],
   "products": [
@@ -387,6 +391,31 @@
       "testo": "hola",
       "coloretesto": "white",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "prodotto": {
+        "id": 12,
+        "colore": "Azzurro",
+        "img": "assets/scarpe/vans/vansAzzurre.jpg",
+        "number": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        "prezzo": 50,
+        "marca": "vans"
+      },
+      "chiusura": "Strappi",
+      "numero": 38,
+      "testo": "",
+      "coloretesto": "",
+      "id": 3
     }
   ],
   "acquisti": []

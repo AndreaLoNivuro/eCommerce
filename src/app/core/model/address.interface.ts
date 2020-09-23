@@ -1,10 +1,10 @@
 export interface Address {
-    nome: string;
-    cognome: string;
+    userId: number;
     cellulare: string;
     citta: string;
     cap: string;
     indirizzo: string;
     numerocivico: number;
     informazioni?: string;
+    id?: number;
 }

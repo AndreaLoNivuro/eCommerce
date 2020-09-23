@@ -11,28 +11,11 @@ export const getCartProducts = createSelector(
     (state: CartState) => state.cart
 );
 
-// export const getCartProductsByUser = createSelector(
-//     selectCartState,
-//     (state: CartState, props: {userId: number}) => {
-//         return state.cart.filter(user => user.userId === props.userId)
-//     }
-// );
-
-export const getNumeroProdotti = createSelector (
-    selectCartState,
-    (state: CartState) => state.cart.length
-);
-
-export const getTotaleCarrello = createSelector(
-    selectCartState,
-    (state: CartState) => {
-        return state.cart.reduce((total, current, idx) => total += current.prodotto.prezzo, 0);
-    }
-);
-
 export const getCurrentNavigatedCart = createSelector(
     selectCartState,
     selectRouteParams,
     (state: CartState, params: Params) => state.cart.filter(item => item.userId === Number(params['id']))
 );
+
+
   

@@ -5,6 +5,7 @@ import { CartComponent } from './main/cart.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
+import { CartService } from './services/cart.service';
 
 
 @NgModule({
@@ -12,6 +13,9 @@ import { PaymentComponent } from './payment/payment.component';
     CartComponent,
     AddressComponent,
     PaymentComponent
+  ],
+  providers: [
+    CartService
   ],
   imports: [
     CartRoutingModule,

@@ -10,10 +10,6 @@ export class PersonalizzaService {
 
   constructor(private store: Store) { }
 
-  createCustomProduct() {
-    
-  }
-
   addToCart(customProduct: CustomProduct) {
     this.store.dispatch(addItem({customProduct}))
   }

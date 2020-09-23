@@ -19,14 +19,6 @@ export class CartEffects {
         return this.http.retrieveGetCall<CustomProduct[]>("cart")
     }
 
-    // registerCustomProduct(prodotto: Products, chiusura: string, numero: string, testo?: string, coloretesto?: string): Observable<CustomProduct>{
-    //     return this.http.retrievePostCall<CustomProduct>("customProducts",{prodotto, chiusura, numero, testo, coloretesto})
-    // }
-     
-    //  formatCustomProduct(customProduct: CustomProduct): CustomProduct{
-    //      return {prodotto: customProduct.prodotto, chiusura: customProduct.chiusura, numero: customProduct.numero, testo: customProduct.testo, coloretesto: customProduct.coloretesto} as CustomProduct;
-    //  }
-
     getCart$: Observable<Action> = createEffect(() => this.actions$.pipe(
         ofType(retrieveAllCart),
         withLatestFrom(this.store.pipe(select(getCurrentUser)), this.store.pipe(select(selectCartState))),

@@ -50,6 +50,11 @@ button:focus {
   background-color: #555;
 }
 
+.numProd {
+  float: right;
+  width: 20%;
+}
+
 img,
 .basket-module,
 .basket-labels,
@@ -266,7 +271,12 @@ aside {
   padding: 0.5rem 0;
 }
 
-.subtotal-title,
+.subtotal-title {
+  
+  color: #111;
+  float: left;
+}
+
 .subtotal-value,
 .total-title,
 .total-value,

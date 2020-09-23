@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
+import { Address } from 'src/app/core/model/address.interface';
+import { User } from 'src/app/core/model/user.interface';
+import { addAddressInfo } from 'src/app/redux/users/login.action';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CartService {
 
   constructor(private store: Store) { }
 
-  // getCartByUser(userId: number) {
-  //   this.store.pipe(select(getCartProductsByUser, {id: userId}));
-
-  // }
-
+  addAddressInfo(address: Address) {
+    this.store.dispatch(addAddressInfo({address}))
+  }
 }

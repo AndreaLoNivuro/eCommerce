@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { Address } from 'src/app/core/model/address.interface';
 import { User } from 'src/app/core/model/user.interface';
+import { getCurrentNavigatedUserAddress, getCurrentUser, selectUsersState } from 'src/app/redux/users';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-address',
@@ -12,27 +15,72 @@ import { User } from 'src/app/core/model/user.interface';
 })
 export class AddressComponent implements OnInit {
 
-  address: Address;
-  utente: User;
+  currentUserId: number;
+  userName: string;
+  userSurname: string;
   formSpedizione: FormGroup;
+  
+  get userAddressInfo() {
+    return this.store.pipe(select(getCurrentNavigatedUserAddress));
+  }
 
-  constructor( private store:Store, private router: Router, private fb:FormBuilder) { }
+  get user(): Observable<User> {
+    return this.store.pipe(select(getCurrentUser));
+  }
+
+  address: Address
+  //currentUser: User;
+
+  constructor( private store:Store, private router: Router, private fb:FormBuilder, private cartService: CartService) { 
+    this.formSpedizione = this.fb.group({
+      cellulare: ['', Validators.required],
+      citta: ['', Validators.required],
+      cap: ['', Validators.required],
+      indirizzo: ['', Validators.required],
+      numerocivico: ['', Validators.required],
+      informazioni: [''],
+    });
+
+    this.userAddressInfo.subscribe(address => {
+      this.formSpedizione.patchValue({
+        cellulare: address?.cellulare,
+        citta: address?.citta,
+        cap: address?.cap,
+        indirizzo: address?.indirizzo,
+        numerocivico: address?.numerocivico,
+        informazioni: address?.informazioni,
+      });
+      // console.log(user);
+      this.address = this.formSpedizione.value;
+      console.log(this.formSpedizione.value);
+      console.log(this.userAddressInfo)
+    });
+    
+    this.user.subscribe(currentUser => {
+      this.currentUserId = currentUser.id
+      this.userName = currentUser.name;
+      this.userSurname = currentUser.surname;
+      console.log(this.currentUserId, this.user, this.userSurname, this.userName)
+    })
+  }
+
+  ripristina() {
+    this.formSpedizione.reset()
+  }
 
   ngOnInit(): void {
-    this.formSpedizione = this.fb.group({
-      nome: [this.address?.nome, Validators.required],
-      cognome: [this.address?.cognome, Validators.required],
-      cellulare: [this.address?.cellulare, Validators.required],
-      citta: [this.address?.citta, Validators.required],
-      cap: [this.address?.cap, Validators.required],
-      indirizzo: [this.address?.indirizzo,Validators.required],
-      numerocivico: [this.address?.numerocivico, Validators.required],
-      informazioni: [this.address?.informazioni],
-    });
+    //console.log(this.address)
   }
 
   goCheckout() {
-    
+    let userAddress: Address = {
+      userId:  this.currentUserId,
+      ...this.formSpedizione.value,
+      
+    };
+    console.log(userAddress);
+    this.cartService.addAddressInfo(userAddress);
+    //this.router.navigateByUrl('/payment');
   }
 
 }
