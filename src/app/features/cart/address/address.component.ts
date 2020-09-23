@@ -19,7 +19,8 @@ export class AddressComponent implements OnInit {
   userName: string;
   userSurname: string;
   formSpedizione: FormGroup;
-  
+  userAddressInfoId: number;
+
   get userAddressInfo() {
     return this.store.pipe(select(getCurrentNavigatedUserAddress));
   }
@@ -51,9 +52,10 @@ export class AddressComponent implements OnInit {
         informazioni: address?.informazioni,
       });
       // console.log(user);
+      this.userAddressInfoId = address.id;
       this.address = this.formSpedizione.value;
-      console.log(this.formSpedizione.value);
-      console.log(this.userAddressInfo)
+      console.log("form"+this.formSpedizione.value);
+      console.log("userAddressInfo"+this.userAddressInfo)
     });
     
     this.user.subscribe(currentUser => {
@@ -74,13 +76,17 @@ export class AddressComponent implements OnInit {
 
   goCheckout() {
     let userAddress: Address = {
-      userId:  this.currentUserId,
+      id:  this.currentUserId,
       ...this.formSpedizione.value,
       
     };
-    console.log(userAddress);
-    this.cartService.addAddressInfo(userAddress);
-    //this.router.navigateByUrl('/payment');
+    console.log(this.currentUserId);
+    console.log("userAddress.id"+userAddress.id);
+    if (this.userAddressInfoId ===  null) {
+      this.cartService.addAddressInfo(userAddress);
+
+    }
+    this.router.navigateByUrl('payment');
   }
 
 }

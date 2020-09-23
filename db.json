@@ -5,33 +5,25 @@
       "name": "Andrea",
       "surname": "Lo Nivuro",
       "password": "ciao",
-      "id": 0
+      "id": 1
     },
     {
       "username": "tita",
       "name": "Silvia",
       "surname": "Lo Nivuro",
       "password": "ciao",
-      "id": 1
+      "id": 2
     },
     {
       "username": "niko",
       "name": "Nicola",
       "surname": "Palmieri",
       "password": "andrea",
-      "id": 2
+      "id": 3
     }
   ],
   "usersAddress": [
-    {
-      "userId": 0,
-      "cellulare": "ciao",
-      "citta": "ciao",
-      "cap": "ciao",
-      "indirizzo": "cio",
-      "numerocivico": "5",
-      "id": 1
-    }
+    
   ],
   "products": [
     {
@@ -343,7 +335,7 @@
   ],
   "cart": [
     {
-      "userId": 0,
+      "userId": 1,
       "prodotto": {
         "id": 6,
         "colore": "Blu",
@@ -368,7 +360,7 @@
       "id": 1
     },
     {
-      "userId": 0,
+      "userId": 1,
       "prodotto": {
         "id": 12,
         "colore": "Azzurro",
@@ -393,7 +385,7 @@
       "id": 2
     },
     {
-      "userId": 1,
+      "userId": 2,
       "prodotto": {
         "id": 12,
         "colore": "Azzurro",

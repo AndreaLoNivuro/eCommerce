@@ -35,7 +35,7 @@ export class LoginEffects{
     ofType(addAddressInfo),
     withLatestFrom(this.store.pipe(select(getCurrentUser))),
     switchMap(([action, user]) => this.http.retrievePostCall("usersAddress", {
-      "userId": user.id,
+      "id": user.id,
       "cellulare": action.address.cellulare,
       "citta": action.address.citta,
       "cap": action.address.cap,

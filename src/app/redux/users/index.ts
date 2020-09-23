@@ -20,5 +20,5 @@ export const selectErrorMessage = createSelector(
 export const getCurrentNavigatedUserAddress = createSelector(
     selectUsersState,
     selectRouteParams,
-    (state: UsersState, params: Params) => state.usersAddress.find(item => item.userId === Number(params['id']))
+    (state: UsersState, params: Params) => state.usersAddress.find(item => item.id === Number(params['id']))
 );
