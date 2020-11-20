@@ -86,7 +86,7 @@ export class AddressComponent implements OnInit {
       this.cartService.addAddressInfo(userAddress);
 
     }
-    this.router.navigateByUrl('payment');
+    this.router.navigateByUrl('/payment');
   }
 
 }

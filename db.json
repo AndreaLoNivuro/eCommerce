@@ -22,9 +22,7 @@
       "id": 3
     }
   ],
-  "usersAddress": [
-    
-  ],
+  "usersAddress": [],
   "products": [
     {
       "id": 0,
@@ -408,6 +406,31 @@
       "testo": "",
       "coloretesto": "",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "prodotto": {
+        "id": 13,
+        "colore": "Bianco",
+        "img": "assets/scarpe/vans/vansBianche.jpg",
+        "number": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        "prezzo": 50,
+        "marca": "vans"
+      },
+      "chiusura": "Elasticizzata",
+      "numero": 37,
+      "testo": "ciso",
+      "coloretesto": "white",
+      "id": 4
     }
   ],
   "acquisti": []
